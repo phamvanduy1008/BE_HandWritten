@@ -14,7 +14,7 @@ CORS(app)
 
 
 # Link tải mnist_train.csv từ Google Drive (dạng direct)
-train_path = "../data/mnist_train.csv"
+train_path = "./data/mnist_train.csv"
 train_url = "https://drive.google.com/uc?export=download&id=17ga2u6S0D0KUewTs9XC69yKR61hljCDq"
 
 # Tải file nếu chưa có
@@ -31,7 +31,7 @@ y_train = train.iloc[:, 0].values
 
 
 try:
-    loaded_model = joblib.load("../model/svm_model.pkl")
+    loaded_model = joblib.load("./model/svm_model.pkl")
     print("Mô hình đã được tải thành công!")
 except Exception as e:
     print(f"Lỗi khi tải mô hình: {e}")
